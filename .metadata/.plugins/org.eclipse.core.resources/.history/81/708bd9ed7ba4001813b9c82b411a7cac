@@ -1,0 +1,21 @@
+<?php
+
+// date 格式化本地日期时间
+
+/** 
+ * format 
+ * Y 4位完整年份
+ * m 月份  01-12
+ * d 日  01-31
+ * H 小时 00-23
+ * i 分钟 00-59
+ * s 秒数 00-59
+ * 
+ * y 年份 2位
+ */
+
+$format = 'Y-m-d'; // 2018-08-20
+echo date($format);
+echo "\n";
+
+echo date('Y/m/d H:i:s');

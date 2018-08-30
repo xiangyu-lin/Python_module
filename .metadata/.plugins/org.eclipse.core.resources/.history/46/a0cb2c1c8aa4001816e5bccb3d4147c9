@@ -1,0 +1,6 @@
+<?php
+// // 其他常用时间函数
+
+// getdate()  datetimeofday checkdate()
+
+var_dump getdate();

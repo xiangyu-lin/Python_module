@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+		<!-- 年月日 -->
+	<input type="date" name="datetime" id=""/><br>
+
+	<!-- 浏览器不支持下面这个 可以用local 年月日时间 -->
+	<input type="datetime" name="datetime1" id=""><br>
+	<input type="datetime-local" name="datetime2" id=""><br>
+
+	<!-- 年月 -->
+	<input type="month" name="month" id=""><br>
+
+	<!-- 第多少周 -->
+	<input type=">
+</body>
+</html>

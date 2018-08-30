@@ -1,0 +1,11 @@
+<?php
+
+// Notice: Use of undefined constant str - assumed 'str' in, 常量的写法
+echo str; //不能这样写
+echo 'str';
+
+// 字串定界符  单引号 双引号 heredoc语法 , nowdoc语法
+
+
+// 单双引号 强弱引用 单引号解析效率高
+// 单引号只解析 \\ \'

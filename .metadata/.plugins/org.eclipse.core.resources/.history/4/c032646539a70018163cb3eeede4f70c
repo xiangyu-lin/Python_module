@@ -1,0 +1,6 @@
+<?php
+
+$str = 'hello php';
+
+// 检测是否是字符串
+var_dump($str)

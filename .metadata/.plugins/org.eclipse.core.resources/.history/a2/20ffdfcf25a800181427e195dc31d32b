@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * 使用系统字体绘制内容
+ */
+
+// 创建画布
+$image = imagecreatetruecolor(500, 500);
+
+// 创建颜色
+$color_white = imagecolorallocate($image, 255, 255, 255);

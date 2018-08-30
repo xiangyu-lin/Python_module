@@ -1,0 +1,30 @@
+<?php
+
+// 
+
+/**
+ * heredoc 
+ * <<< 标识名
+ *     内容...
+ * 结束符(标识名)
+ * 
+ * 标识名 和变量命名方式一样
+ * 结束符前不能有任何内容 像制表符 空格都不行
+ */
+
+$table = <<< EOF
+<table>
+    <tr>
+        <td>id</td>
+        <td>username</td>
+        <td>description</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>xiangyu.lin</td>
+        <td>null</td>
+    </tr>
+</table>
+EOF;
+
+echo $table;

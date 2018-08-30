@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * 给验证码添加干扰元素
+ *  绘制像素  imagesetpixel()
+ *  绘制线段  imageline()
+ *  绘制圆弧 imagearc()
+ */
+
+$width = 200;
+$height = 100;
+$image = imagecreatetruecolor($width, $height);
+$color_white = imagecolorallocate($image, 255, 255, 255);
+// imagefilledrectangle($image, 0, 0, $width, $height, $color_white);
+
+function getRandColor($image) 
+{
+    return imagecolorallocate($image, mt_rand(0, 255), mt_rand(0, 255), mt_rand(0, 255)); //产生随机颜色
+}
+
+// 快速创建字符串
+$string = join('',array_merge(range(0, 9), range('a', 'z'), range('A', 'Z')));// array_merge 合并数组,join 以空字符串连接数组值
+
+// 得到字体宽高
+$textWidth = imagefontwidth(28);
+$textHeight =  imagefontheight(28);
+
+
+$fontfile = 'fonts/CONSOLA.TTF';
+$length = 4; //验证码位数
+
+for ($i = 0; $i < $length; $i++) {
+    $color_rand = getRandColor($image);
+    $size = mt_rand(20, 28);
+    $angle = mt_rand(-15, 15);
+    $x = ($width/$length) * $i;
+    $text = str_shuffle($string)[0]; //打乱
+    imagettftext($image, $size, $angle, $x, 50, $color_rand, $fontfile, $text);
+}
+
+// 添加干扰元素  像素
+for ($i = 0; $i <= 50; $i++) {
+    imagesetpixel($image, mt_rand(0, $width), mt_rand(0, $height), getRandColor($image)); //绘制像素
+}
+
+// 添加干扰元素 线段
+
+for ($i = 1; $i <= 2; $i++) {
+    // 绘制两条线段
+    imageline($image, mt_rand(0, $width), mt_rand(0, $height), mt_rand(0, $width), mt_rand(0, $height), getRandColor($image));
+}
+
+for ($i = 1; $i <= 2; $i++) {
+    //绘制圆弧
+    imagearc($image, mt_rand(0, $width), mt_rand(0, $height), mt_rand(0, $width/2), mt_rand(0, $height/2), mt_rand(0, 360), mt_rand(0, 360), getRandColor($image));
+}
+header('content-type:image/png');
+imagepng($image);
+imagedestroy($image); 

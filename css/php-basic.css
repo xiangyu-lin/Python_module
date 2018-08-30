@@ -1,0 +1,9 @@
+/*
+ * This is php-basic's css file.
+ */
+
+body{
+	background-color: black;
+	color: white;
+	font-size: 24px;
+}

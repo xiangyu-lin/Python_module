@@ -1,0 +1,6 @@
+<?php
+
+// 检测扩展是否开启
+var_dump(extension_loaded('gd'));
+
+// 检测函数是否可以使用

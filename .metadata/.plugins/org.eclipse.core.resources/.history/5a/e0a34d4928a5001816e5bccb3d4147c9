@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="uft-8">
+		<title>H5 新增表单控件</title>
+	</head>
+	<body>
+		<h1>H5 新增表单控件</h1>
+		<form action="doAction.php" method="post">
+			<input type="date" name="datetime" id=""/><br>
+			<!-- 浏览器不支持下面这个 -->
+			<input type="datetime" name="datetime1" id=""><br>
+			<input type="datetime-local" name= "datetime2" id=""><br>
+		</form>
+	</body>
+</html>
+

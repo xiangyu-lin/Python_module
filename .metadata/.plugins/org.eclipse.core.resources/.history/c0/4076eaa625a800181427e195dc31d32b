@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * 使用系统字体绘制内容
+ */
+
+// 创建画布
+$image = imagecreatetruecolor(500, 500);

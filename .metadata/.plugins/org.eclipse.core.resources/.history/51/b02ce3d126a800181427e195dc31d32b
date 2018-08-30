@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * 使用系统字体绘制内容
+ */
+
+// 创建画布
+$image = imagecreatetruecolor(500, 500);
+
+// 创建颜色
+$color_white = imagecolorallocate($image, 255, 255, 255);
+$color_rand = imagecolorallocate($image, mt_rand(0, 255), mt_rand(0, 255), mt_rand(0, 255));
+
+// 绘制填充矩形
+imagefilledrectangle($image, 0, 0, 500, 500, $color_white);
+
+// 绘画 (windows 运行 -> fonts 查看字体库)
+imagettftext($image, $size, $angle, $x, $y, $color, $fontfile, $text);

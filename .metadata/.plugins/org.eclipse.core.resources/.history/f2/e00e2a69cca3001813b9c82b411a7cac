@@ -1,0 +1,23 @@
+<?php
+
+// 简介
+
+// 日期时间函数库是PHP 内置函数库， 通过日期时间函数库获取服务器的日期时间相关内容
+
+// 设置时区
+/**
+ * 方法一 修改PHP配置文件 date.timezone 设置时区 对所有配置文件有效
+ * /etc/php.ini -> date.timezone=PRC
+ */
+// 
+
+// 
+
+// 方法二 通过 date_default_timezone_set()  动态设置时区 对当前 文件有效
+
+// Asia/shanghai
+// PRC 中华人民共和国
+
+
+// date_default_timezone_set($timezone_identifier);
+echo "当前时区为: ".date_default_timezone_get();

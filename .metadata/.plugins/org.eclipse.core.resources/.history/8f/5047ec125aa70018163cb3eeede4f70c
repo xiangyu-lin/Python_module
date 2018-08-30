@@ -1,0 +1,33 @@
+<?php
+
+// ord() 得到指定字符的 ASCII
+// chr() 根据ASCII返回指定字符
+$char = ord('k');
+echo $char;
+echo chr($char);
+
+// substr($string, $strat[, $lenth]) 截取字符串
+$string = '0123456';
+echo substr($string, 2, 5);
+echo substr($string, -2, -1); // 负数倒着数  往前取
+
+/**
+ * strcmp($str, $str2) 比较字符串大小,比较区分大小写
+ * strcasecmp($str1, $str2) 忽略大小写比较
+ * 返回值
+ * 1 --> $str1 > $str2
+ * -1 --> $str1 < $str2
+ * 0 --> $str1 = $str2
+ */
+$str1 = 'a';
+$str2 = 'A';
+echo strcmp($str1, $str2);
+echo strcasecmp($str1, $str2);
+/**
+ * 字符串查找
+ * strpos($string, $search) 返回字符串首次出现的位置 区分大小写
+ * stripos($string, $search) i --> ignore 忽略大小写
+ */ 
+$email = '3139303033@qq.com';
+var_dump(strpos($email, '@'));
+var_dump(stripos($email, 'Q'));
