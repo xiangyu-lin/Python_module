@@ -1,4 +1,0 @@
-<?php
-
-// Notice: Use of undefined constant str - assumed 'str' in
-echo str;

@@ -1,4 +1,0 @@
-<?php
-
-// Notice: Use of undefined constant str - assumed 'str' in, 常量的写法
-echo str;

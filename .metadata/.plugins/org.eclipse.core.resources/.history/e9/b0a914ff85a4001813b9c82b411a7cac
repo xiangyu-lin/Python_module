@@ -1,7 +1,0 @@
-<?php
-
-// microtime() 获取微秒
-// 计算php程序执行时间等
-
-echo time();
-echo microtime();
